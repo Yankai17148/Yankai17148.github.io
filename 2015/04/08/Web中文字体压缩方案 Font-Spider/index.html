@@ -20,19 +20,9 @@
 
 
 
+	<meta name="keywords" content="Front-End," />
 
-    <meta name="keywords" content="Hexo,next" />
-
-
-
-
-
-    <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.1" />
-
-
-
-
-  <title> Hello World // Just Relax </title>
+  <title> Web中文字体压缩方案 Font-Spider // Just Relax </title>
 </head>
 
 <body>
@@ -114,7 +104,7 @@
           
           
             
-              Hello World
+              Web中文字体压缩方案 Font-Spider
             
           
         </h1>
@@ -123,7 +113,7 @@
       <div class="post-meta">
         <span class="post-time">
           
-            发表于 2015-04-07
+            发表于 2015-04-08
           
         </span>
 
@@ -135,8 +125,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/04/07/hello-world/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/07/hello-world/"></span>
+            <a href="/2015/04/08/Web中文字体压缩方案 Font-Spider/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/08/Web中文字体压缩方案 Font-Spider/"></span>
             </a>
           </span>
           
@@ -151,7 +141,37 @@
         
 
         
-          <p>折腾了一天总算是把这个博客弄出来了，希望我这个懒癌晚期的患者能多来更新这个博客吧，可能什么都会写一点，随笔，心情，技术，学习笔记，摘抄什么的。。。。。。。</p>
+          <p>字蛛是一款中文Web-Font压缩工具</p>
+<h2 id="特性">特性</h2><ol>
+<li>中文字体压缩，可以将几MB的中文字体压缩为十几KB</li>
+<li>用法简单，一段命令即可完成</li>
+<li>文本支持选中，搜索，朗读，翻译，缩放</li>
+</ol>
+<a id="more"></a>
+<h2 id="安装">安装</h2><p>安装font-spider需要nodejs环境以及npm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g font-spider</span><br></pre></td></tr></table></figure>
+<p>Mac下需要管理员权限 <code>sudo</code> 。</p>
+<h2 id="使用">使用</h2><p>在CSS下声明字体文件</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*声明 WebFont*/</span></span><br><span class="line"><span class="at_rule">@<span class="keyword">font-face</span></span> <span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'pinghei'</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">src</span>:<span class="value"> <span class="function">url</span>(<span class="string">'../font/pinghei.eot'</span>)</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">src</span>:<span class="value"></span><br><span class="line">	<span class="function">url</span>(<span class="string">'../font/pinghei.eot?#font-spider'</span>) <span class="function">format</span>(<span class="string">'embedded-opentype'</span>),</span><br><span class="line">	<span class="function">url</span>(<span class="string">'../font/pinghei.woff'</span>) <span class="function">format</span>(<span class="string">'woff'</span>),</span><br><span class="line">	<span class="function">url</span>(<span class="string">'../font/pinghei.ttf'</span>) <span class="function">format</span>(<span class="string">'truetype'</span>),</span><br><span class="line">	<span class="function">url</span>(<span class="string">'../font/pinghei.svg'</span>) <span class="function">format</span>(<span class="string">'svg'</span>)</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">font-weight</span>:<span class="value"> normal</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">font-style</span>:<span class="value"> normal</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*使用选择器指定字体*/</span></span><br><span class="line"><span class="class">.home</span> <span class="tag">h1</span>, <span class="class">.demo</span> &gt; <span class="class">.test</span> <span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'pinghei'</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Tips">Tips</h3><blockquote>
+<ol>
+<li><code>@font-face</code> 中定义的 <code>src</code> 属性中的 .ttf文件必须存在，其他格式的字体工具会自动生成</li>
+<li>不支持动态插入的CSS和字符</li>
+<li>CSS <code>content</code> 插入的字符需要定义 <code>font-family</code> ，不支持继承</li>
+</ol>
+</blockquote>
+<h2 id="压缩命令">压缩命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ font-spider [options] &lt;html files&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>例子： <code>$ font-spider dist/*.html</code></p>
+</blockquote>
+<h2 id="劣势">劣势</h2><blockquote>
+<ol>
+<li>由于font-spider的运行机制是筛选html文件中使用的字符之后从字体文件中筛选出来删除无用的字符来减小字体文件的大小，所以font-spider并不适用于大段文字以及文章正文</li>
+<li>在开发过程中需要多次编译保证效果</li>
+<li>某些字体会出现编译不通过的情况，待官方修复</li>
+</ol>
+</blockquote>
+<p>官网地址：<a href="http://font-spider.org/" target="_blank" rel="external">Font-Spider</a><br>Github：<a href="https://github.com/aui/font-spider" target="_blank" rel="external">Github地址</a></p>
 
         
       </div>
@@ -160,16 +180,24 @@
     
       <div class="post-footer">
         
+          <div class="post-tags">
+            
+              <a href="/tags/Front-End/">
+                #Front-End
+              </a>
+            
+          </div>
+        
 
         
           <div class="post-nav">
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2015/04/08/Web中文字体压缩方案 Font-Spider/">Web中文字体压缩方案 Font-Spider</a>
-              
             </div>
 
             <div class="post-nav-next post-nav-item">
+              
+                <a href="/2015/04/07/hello-world/">Hello World</a>
               
             </div>
           </div>
@@ -186,8 +214,8 @@
   
     <div class="comments" id="comments">
       
-        <div class="ds-thread" data-thread-key="2015/04/07/hello-world/"
-             data-title="Hello World" data-url="http://Yankai17148.github.io/2015/04/07/hello-world/">
+        <div class="ds-thread" data-thread-key="2015/04/08/Web中文字体压缩方案 Font-Spider/"
+             data-title="Web中文字体压缩方案 Font-Spider" data-url="http://Yankai17148.github.io/2015/04/08/Web中文字体压缩方案 Font-Spider/">
         </div>
 
       
@@ -287,7 +315,7 @@
         <div class="post-toc">
           
           
-            <p class="post-toc-empty">此文章未包含目录</p>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">1.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">3.1.</span> <span class="nav-text">Tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩命令"><span class="nav-number">4.</span> <span class="nav-text">压缩命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#劣势"><span class="nav-number">5.</span> <span class="nav-text">劣势</span></a></li></ol></div>
           
         </div>
         <div class="post-toc-indicator-bottom post-toc-indicator"></div>
