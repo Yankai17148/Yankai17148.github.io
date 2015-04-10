@@ -1,0 +1,1184 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-next">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.1"/>
+
+
+    <meta name="description" content="html | javascript | css | front-end" />
+
+
+
+	<meta name="keywords" content="CSS,Front-End," />
+
+  <title> 关于CSS3变换属性的种种 // Just Relax </title>
+</head>
+
+<body>
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Just Relax</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+
+  <ul id="menu" class="menu">
+    
+    
+      
+      <li class="menu-item menu-item-home">
+        <a href="/">
+          <i class="menu-item-icon icon-home"></i> <br />
+          首页
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-archives">
+        <a href="/archives">
+          <i class="menu-item-icon icon-archives"></i> <br />
+          归档
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-tags">
+        <a href="/tags">
+          <i class="menu-item-icon icon-tags"></i> <br />
+          标签
+        </a>
+      </li>
+    
+      
+      <li class="menu-item menu-item-about">
+        <a href="/about">
+          <i class="menu-item-icon icon-about"></i> <br />
+          关于
+        </a>
+      </li>
+    
+  </ul>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+            
+          
+
+          <div id="posts" class="posts-expand">
+            
+  
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              关于CSS3变换属性的种种
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          
+            发表于 2015-04-10
+          
+        </span>
+
+        
+          
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2015/04/10/关于CSS3变换属性的种种/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/10/关于CSS3变换属性的种种/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    
+      <div class="post-body">
+
+        
+        
+
+        
+          <h2 id="变形——旋转_rotate()">变形——旋转 rotate()</h2><blockquote>
+<p>通过指定的角度参数使元素相对原点进行旋转，正值顺时针，负值逆时针</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">rotate</span>(<span class="number">45deg</span>)</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">rotate</span>(<span class="number">45deg</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="变形—扭曲_skew()">变形—扭曲 skew()</h2><blockquote>
+<p>让元素倾斜显示。它可以将一个对象以其中心位置围绕着X轴和Y轴按照一定的角度倾斜这与rotate()函数的旋转不同，rotate()函数只是旋转，而不会改变元素的形状。skew()函数不会旋转，而只会改变元素的形状。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="skew()_具有三种情况：">skew() 具有三种情况：</h3><ol>
+<li>skew(x,y)使元素在水平和垂直方向同时扭曲</li>
+<li>skewX(x)仅使元素在水平方向扭曲变形</li>
+<li>skewY(y)仅使元素在垂直方向扭曲变形</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">skew</span>(<span class="number">45deg</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-moz-transform</span>:<span class="value"> <span class="function">skew</span>(<span class="number">45deg</span>) </span><br><span class="line">        transform: <span class="function">skew</span>(<span class="number">45deg</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="变形—缩放_scale()">变形—缩放 scale()</h2><blockquote>
+<p>让元素根据中心原点对对象进行缩放</p>
+</blockquote>
+<h3 id="scale_具有三种情况">scale 具有三种情况</h3><ol>
+<li>scale(X,Y)使元素水平方向和垂直方向同时缩放</li>
+<li>scaleX(x)元素仅水平方向缩放</li>
+<li>scaleY(y)元素仅垂直方向缩放</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">scale</span>(<span class="number">1.5</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-moz-transform</span>:<span class="value"><span class="function">scale</span>(<span class="number">1.5</span>)</span><br><span class="line">        transform: <span class="function">scale</span>(<span class="number">1.5</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="变形—位移_translate()">变形—位移 translate()</h2><blockquote>
+<p>translate()函数可以将元素向指定的方向移动，类似于position中的relative,或以简单的理解为，使用translate()函数，可以把元素从原来的位置移动，而不影响在X、Y轴上的任何Web组件。</p>
+</blockquote>
+<h3 id="translate我们三种情况">translate我们三种情况</h3><ol>
+<li>translate(x,y)水平方向和垂直方向同时移动</li>
+<li>translateX(x)仅水平方向移动</li>
+<li>translateY(Y)仅垂直方向移动</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-moz-transform</span>:<span class="value"> <span class="function">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>)</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translate</span>(<span class="number">50px</span>,<span class="number">100px</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="变形—矩阵_matrix()">变形—矩阵 matrix()</h2><blockquote>
+<p>matrix() 是一个含六个值的(a,b,c,d,e,f)变换矩阵，用来指定一个2D变换，相当于直接应用一个[a b c d e f]变换矩阵。就是基于水平方向（X轴）和垂直方向（Y轴）重新定位元素,此属性值使用涉及到数学中的矩阵.</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform</span>:<span class="value"> <span class="function">matrix</span>(<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">50</span>,<span class="number">50</span>)</span></span>;</span><br><span class="line">   <span class="rule"><span class="attribute">-moz-transform</span>:<span class="value"> <span class="function">matrix</span>(<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">50</span>,<span class="number">50</span>)</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">matrix</span>(<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">50</span>,<span class="number">50</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="变形—原点_transform-origin">变形—原点 transform-origin</h2><blockquote>
+<p>任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处.在没有重置transform-origin改变元素原点位置的情况下，CSS变形进行的旋转、位移、缩放，扭曲等操作都是以元素自己中心位置进行变形。但很多时候，我们可以通过transform-origin来对元素进行原点位置改变，使元素原点不在元素的中心位置，以达到需要的原点位置。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transform-origin</span>:<span class="value"> left top</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">transform-origin</span>:<span class="value"> left top</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="动画—过渡属性_transition-property">动画—过渡属性 transition-property</h2><blockquote>
+<p>CSS3的过度transition属性是一个复合属性，主要包括以下几个子属性：</p>
+</blockquote>
+<ol>
+<li>transition-property:指定过渡或动态模拟的CSS属性</li>
+<li>transition-duration:指定完成过渡所需的时间</li>
+<li>transition-timing-function:指定过渡函数</li>
+<li>transition-delay:指定开始出现的延迟时间</li>
+</ol>
+<blockquote>
+<p>transition-property用来指定过渡动画的CSS属性名称，而这个过渡属性只有具备一个中点值的属性（需要产生动画的属性）才能具备过渡效果，其对应具有过渡的CSS属性主要有:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性名称</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>only gradients</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>percentage, length</td>
+</tr>
+<tr>
+<td>border-bottom-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>border-bottom-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>border-left-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>border-left-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>border-right-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>border-right-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>border-spacing</td>
+<td>length</td>
+</tr>
+<tr>
+<td>border-top-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>border-top-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>crop</td>
+<td>rectangle</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>number</td>
+</tr>
+<tr>
+<td>grid-*</td>
+<td>various</td>
+</tr>
+<tr>
+<td>height</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>left</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>length</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>number, length, percentage</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>length</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>length</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>length</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>length</td>
+</tr>
+<tr>
+<td>max-height</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>max-width</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>min-height</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>min-width</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>number</td>
+</tr>
+<tr>
+<td>outline-color</td>
+<td>color</td>
+</tr>
+<tr>
+<td>outline-offset</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>length</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>length</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>length</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>length</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>length</td>
+</tr>
+<tr>
+<td>right</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>shadow</td>
+</tr>
+<tr>
+<td>top</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>keywords, length, percentage</td>
+</tr>
+<tr>
+<td>visibility</td>
+<td>visibility</td>
+</tr>
+<tr>
+<td>width</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>length, percentage</td>
+</tr>
+<tr>
+<td>z-index</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>zoom</td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background</span>:<span class="value"> red</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20px</span> auto</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-property</span>:<span class="value"> height</span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-property</span>:<span class="value"> height</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-duration</span>:<span class="value"> .<span class="number">5s</span></span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-duration</span>:<span class="value"> .<span class="number">5s</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-timing-function</span>:<span class="value"> ease-in</span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-timing-function</span>:<span class="value"> ease-in</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-delay</span>:<span class="value"> .<span class="number">18s</span></span></span>;</span><br><span class="line">  	  <span class="rule"><span class="attribute">transition-delay</span>:<span class="value"> .<span class="number">18s</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="rule"><span class="attribute">div</span>:<span class="value">hover &#123;</span><br><span class="line">  height: <span class="number">400px</span></span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="动画—过渡所需时间_transition-duration">动画—过渡所需时间 transition-duration</h2><blockquote>
+<p>用来设置一个属性过渡到另一个属性所需的时间，也就是从旧属性过渡到新属性花费的时间长度，俗称持续时间。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="rule"><span class="attribute">-webkit-transition-duration</span>:<span class="value"> <span class="number">1s</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">transition-duration</span>:<span class="value"> <span class="number">1s</span></span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="动画—过渡函数_transition-timing-function">动画—过渡函数 transition-timing-function</h2><blockquote>
+<p>transition-timing-function属性指的是过渡的“缓动函数”。主要用来指定浏览器的过渡速度，以及过渡期间的操作进展情况，其中要包括以下几种函数:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>函数名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear</td>
+<td>线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)</td>
+</tr>
+<tr>
+<td>ease：</td>
+<td>平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)</td>
+</tr>
+<tr>
+<td>ease-in：</td>
+<td>由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)</td>
+</tr>
+<tr>
+<td>ease-out：</td>
+<td>由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)</td>
+</tr>
+<tr>
+<td>ease-in-out：</td>
+<td>由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)</td>
+</tr>
+<tr>
+<td>cubic-bezier(number, number, number, number)：</td>
+<td>特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> orange</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20px</span> auto</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-property</span>:<span class="value"> -webkit-border-radius</span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-property</span>:<span class="value"> border-radius</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-duration</span>:<span class="value"> <span class="number">1s</span></span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-duration</span>:<span class="value"> <span class="number">1s</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-timing-function</span>:<span class="value"> ease-in</span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-timing-function</span>:<span class="value"> ease-in</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition-delay</span>:<span class="value"> .<span class="number">2s</span></span></span>;</span><br><span class="line">          <span class="rule"><span class="attribute">transition-delay</span>:<span class="value"> .<span class="number">2s</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="rule"><span class="attribute">div</span>:<span class="value">hover &#123;</span><br><span class="line">  border-radius: <span class="number">0px</span></span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="动画—过渡延迟时间_transition-delay">动画—过渡延迟时间 transition-delay</h2><blockquote>
+<p>transition-delay属性和transition-duration属性极其类似，不同的是transition-duration是用来设置过渡动画的持续时间，而transition-delay主要用来指定一个动画开始执行的时间，也就是说当改变元素属性值后多长时间开始执行。<br>有时我们想改变两个或者多个css属性的transition效果时，只要把几个transition的声明串在一起，用逗号（“，”）隔开，然后各自可以有各自不同的延续时间和其时间的速率变换方式。但需要值得注意的一点：第一个时间的值为 transition-duration，第二个为transition-delay。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">a</span><span class="rules">&#123; <span class="rule"><span class="attribute">transition</span>:<span class="value"> background <span class="number">0.8s</span> ease-in <span class="number">0.3</span>,color <span class="number">0.6s</span> ease-out <span class="number">0.3</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.wrapper</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">400px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">400px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20px</span> auto</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2px</span> dotted red</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.wrapper</span> <span class="tag">div</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> orange</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-transition</span>:<span class="value"> all .<span class="number">28s</span> ease-in .<span class="number">1s</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">transition</span>:<span class="value"> all .<span class="number">28s</span> ease-in .<span class="number">1s</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.wrapper</span> <span class="rule"><span class="attribute">div</span>:<span class="value">hover &#123;</span><br><span class="line">  width: <span class="number">300px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">300px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+      </div>
+    
+
+    
+      <div class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/CSS/">
+                #CSS
+              </a>
+            
+              <a href="/tags/Front-End/">
+                #Front-End
+              </a>
+            
+          </div>
+        
+
+        
+          <div class="post-nav">
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2015/04/08/Web中文字体压缩方案 Font-Spider/">Web中文字体压缩方案 Font-Spider</a>
+              
+            </div>
+          </div>
+        
+
+        
+        
+      </div>
+    
+  </div>
+
+
+
+  
+    <div class="comments" id="comments">
+      
+        <div class="ds-thread" data-thread-key="2015/04/10/关于CSS3变换属性的种种/"
+             data-title="关于CSS3变换属性的种种" data-url="http://Yankai17148.github.io/2015/04/10/关于CSS3变换属性的种种/">
+        </div>
+
+      
+    </div>
+  
+
+          </div>
+
+          
+        </div>
+
+        
+<div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+
+<div id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview">
+          站点概览
+        </li>
+      </ul>
+    
+
+    <div class="site-overview">
+      <div class="site-author motion-element">
+        <img class="site-author-image" src="/images/default_avatar.jpg" alt="Yan Kai" />
+        <p class="site-author-name">Yan Kai</p>
+      </div>
+      <p class="site-description motion-element">html | javascript | css | front-end</p>
+      <div class="site-state motion-element">
+        <div class="site-state-item site-state-posts">
+          <a href="/archives">
+            <span class="site-state-item-count">3</span>
+            <span class="site-state-item-name">日志</span>
+          </a>
+        </div>
+
+        <div class="site-state-item site-state-categories">
+          
+            <span class="site-state-item-count">0</span>
+            <span class="site-state-item-name">分类</span>
+          
+        </div>
+
+        <div class="site-state-item site-state-tags">
+          <a href="/tags">
+            <span class="site-state-item-count">2</span>
+            <span class="site-state-item-name">标签</span>
+          </a>
+        </div>
+
+      </div>
+
+      
+
+      <div class="links-of-author motion-element">
+        
+          
+            <span class="links-of-author-item">
+              <a href="https://github.com/Yankai17148" target="_blank">GitHub</a>
+            </span>
+          
+            <span class="links-of-author-item">
+              <a href="https://twitter.com/Yankai6" target="_blank">Twitter</a>
+            </span>
+          
+            <span class="links-of-author-item">
+              <a href="http://weibo.com/1608580297/" target="_blank">Weibo</a>
+            </span>
+          
+            <span class="links-of-author-item">
+              <a href="http://www.zhihu.com/people/yan-kai-3" target="_blank">ZhiHu</a>
+            </span>
+          
+        
+      </div>
+
+      
+      
+
+    </div>
+
+    
+      <div class="post-toc-wrap sidebar-panel-active">
+        <div class="post-toc-indicator-top post-toc-indicator"></div>
+        <div class="post-toc">
+          
+          
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变形——旋转_rotate()"><span class="nav-number">1.</span> <span class="nav-text">变形——旋转 rotate()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形—扭曲_skew()"><span class="nav-number">2.</span> <span class="nav-text">变形—扭曲 skew()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#skew()_具有三种情况："><span class="nav-number">2.1.</span> <span class="nav-text">skew() 具有三种情况：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形—缩放_scale()"><span class="nav-number">3.</span> <span class="nav-text">变形—缩放 scale()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scale_具有三种情况"><span class="nav-number">3.1.</span> <span class="nav-text">scale 具有三种情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形—位移_translate()"><span class="nav-number">4.</span> <span class="nav-text">变形—位移 translate()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#translate我们三种情况"><span class="nav-number">4.1.</span> <span class="nav-text">translate我们三种情况</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形—矩阵_matrix()"><span class="nav-number">5.</span> <span class="nav-text">变形—矩阵 matrix()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变形—原点_transform-origin"><span class="nav-number">6.</span> <span class="nav-text">变形—原点 transform-origin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画—过渡属性_transition-property"><span class="nav-number">7.</span> <span class="nav-text">动画—过渡属性 transition-property</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画—过渡所需时间_transition-duration"><span class="nav-number">8.</span> <span class="nav-text">动画—过渡所需时间 transition-duration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画—过渡函数_transition-timing-function"><span class="nav-number">9.</span> <span class="nav-text">动画—过渡函数 transition-timing-function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画—过渡延迟时间_transition-delay"><span class="nav-number">10.</span> <span class="nav-text">动画—过渡延迟时间 transition-delay</span></a></li></ol></div>
+          
+        </div>
+        <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+      </div>
+    
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2014 - 
+  2015
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Yan Kai</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.content img').each(function () {
+        var $image = $(this);
+        var $imageWrapLink = $image.parent('a');
+
+        if ($imageWrapLink.size() < 1) {
+          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
+        }
+        $imageWrapLink.addClass('fancybox');
+      });
+    });
+    $('.fancybox').fancybox({
+      helpers: {
+        overlay: {
+          locked: false
+        }
+      }
+    });
+  </script>
+
+
+  <script type="text/javascript">
+  function hasMobileUA () {
+    var nav = window.navigator;
+    var ua = nav.userAgent;
+    var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
+
+    return pa.test(ua);
+  }
+
+  function isDesktop () {
+    return screen.width > 991 && !hasMobileUA();
+  }
+
+  function isTablet () {
+    return screen.width < 992 && screen.width > 767 && hasMobileUA();
+  }
+
+  function isMobile () {
+    return screen.width < 767 && hasMobileUA();
+  }
+
+  function escapeSelector (selector) {
+    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
+  }
+</script>
+
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" id="motion.global">
+  $(document).ready(function () {
+    var body = $('body');
+    var isSidebarVisible = false;
+    var sidebarToggle = $('.sidebar-toggle');
+    var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
+    var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
+    var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
+    var sidebar = $('.sidebar');
+
+    var SIDEBAR_WIDTH = '320px';
+    var SIDEBAR_DISPLAY_DURATION = 300;
+
+    var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
+
+    var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
+    var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
+
+    var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine2ndStatusArrow = {width: '90%'};
+    var sidebarToogleLine2ndStatusClose = {opacity: 0};
+
+    var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
+    var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
+    var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+
+    LogoAndMenuMotion();
+    sidebatToggleMotion();
+    postsListMotion();
+    backToTopMotion();
+
+
+    $(document)
+      .on('sidebar.isShowing', function () {
+        isDesktop() && body.velocity(
+          {paddingRight: SIDEBAR_WIDTH},
+          SIDEBAR_DISPLAY_DURATION
+        );
+        sidebarContentMotion();
+      })
+      .on('sidebar.isHiding', function () {});
+
+    function LogoAndMenuMotion() {
+      $.Velocity.RunSequence([
+        { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
+        { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
+        
+        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
+        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
+        
+        { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
+      ]);
+      $('.menu-item').velocity('transition.slideDownIn', {display: null});
+    }
+
+
+    function backToTopMotion () {
+      var b2top = $('.back-to-top');
+      b2top.on('click', function () {
+        body.velocity('scroll');
+      });
+    }
+
+    function sidebarShowMotion () {
+
+      sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
+      sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
+      sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
+
+      sidebar.velocity({width: SIDEBAR_WIDTH}, {
+        display: 'block',
+        duration: SIDEBAR_DISPLAY_DURATION,
+        complete: function () {
+          sidebar.addClass('sidebar-active');
+          sidebar.trigger('sidebar.didShow');
+        }
+      });
+      sidebar.trigger('sidebar.isShowing');
+    }
+
+    function sidebarHideMotion () {
+      isDesktop() && body.velocity({paddingRight: 0});
+      sidebar.velocity('reverse');
+
+      sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
+      sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
+      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+
+      sidebar.removeClass('sidebar-active');
+      sidebar.trigger('sidebar.isHiding');
+    };
+
+    function sidebarContentMotion () {
+      $('.sidebar .motion-element').velocity(
+        'transition.slideRightIn',
+        {stagger: 50, drag: true}
+      );
+    }
+
+    function postsListMotion () {
+      var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
+      $('.post').velocity('transition.slideDownIn', postMotionOptions);
+    }
+
+    function sidebatToggleMotion () {
+      sidebarToggle.on('click', function () {
+        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
+        isSidebarVisible = !isSidebarVisible;
+      });
+
+      sidebarToggle.hover(function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
+      }, function () {
+        if (isSidebarVisible) {return}
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
+      });
+    }
+  });
+
+</script>
+
+
+
+
+
+  
+  
+<script type="text/javascript" id="bootstrap.scrollspy.custom">
+  /* ========================================================================
+  * Bootstrap: scrollspy.js v3.3.2
+  * http://getbootstrap.com/javascript/#scrollspy
+  * ========================================================================
+  * Copyright 2011-2015 Twitter, Inc.
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * ======================================================================== */
+
+  /**
+   * Custom by iissnan
+   *
+   * - Add a `clear.bs.scrollspy` event.
+   * - Esacpe targets selector.
+   */
+
+
+  +function ($) {
+    'use strict';
+
+    // SCROLLSPY CLASS DEFINITION
+    // ==========================
+
+    function ScrollSpy(element, options) {
+      this.$body          = $(document.body)
+      this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+      this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+      this.selector       = (this.options.target || '') + ' .nav li > a'
+      this.offsets        = []
+      this.targets        = []
+      this.activeTarget   = null
+      this.scrollHeight   = 0
+
+      this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+      this.refresh()
+      this.process()
+    }
+
+    ScrollSpy.VERSION  = '3.3.2'
+
+    ScrollSpy.DEFAULTS = {
+      offset: 10
+    }
+
+    ScrollSpy.prototype.getScrollHeight = function () {
+      return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+    }
+
+    ScrollSpy.prototype.refresh = function () {
+      var that          = this
+      var offsetMethod  = 'offset'
+      var offsetBase    = 0
+
+      this.offsets      = []
+      this.targets      = []
+      this.scrollHeight = this.getScrollHeight()
+
+      if (!$.isWindow(this.$scrollElement[0])) {
+        offsetMethod = 'position'
+        offsetBase   = this.$scrollElement.scrollTop()
+      }
+
+      this.$body
+        .find(this.selector)
+        .map(function () {
+          var $el   = $(this)
+          var href  = $el.data('target') || $el.attr('href')
+          var $href = /^#./.test(href) && $(escapeSelector(href)) // Need to escape selector.
+
+          return ($href
+            && $href.length
+            && $href.is(':visible')
+            && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+        })
+        .sort(function (a, b) { return a[0] - b[0] })
+        .each(function () {
+          that.offsets.push(this[0])
+          that.targets.push(this[1])
+        })
+
+
+    }
+
+    ScrollSpy.prototype.process = function () {
+      var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+      var scrollHeight = this.getScrollHeight()
+      var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+      var offsets      = this.offsets
+      var targets      = this.targets
+      var activeTarget = this.activeTarget
+      var i
+
+      if (this.scrollHeight != scrollHeight) {
+        this.refresh()
+      }
+
+      if (scrollTop >= maxScroll) {
+        return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+      }
+
+      if (activeTarget && scrollTop < offsets[0]) {
+        $(this.selector).trigger('clear.bs.scrollspy')  // Add a custom event.
+        this.activeTarget = null
+        return this.clear()
+      }
+
+      for (i = offsets.length; i--;) {
+        activeTarget != targets[i]
+          && scrollTop >= offsets[i]
+          && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
+          && this.activate(targets[i])
+      }
+    }
+
+    ScrollSpy.prototype.activate = function (target) {
+      this.activeTarget = target
+
+      this.clear()
+
+      var selector = this.selector +
+        '[data-target="' + target + '"],' +
+        this.selector + '[href="' + target + '"]'
+
+      var active = $(selector)
+        .parents('li')
+        .addClass('active')
+
+      if (active.parent('.dropdown-menu').length) {
+        active = active
+          .closest('li.dropdown')
+          .addClass('active')
+      }
+
+      active.trigger('activate.bs.scrollspy')
+    }
+
+    ScrollSpy.prototype.clear = function () {
+      $(this.selector)
+        .parentsUntil(this.options.target, '.active')
+        .removeClass('active')
+    }
+
+
+    // SCROLLSPY PLUGIN DEFINITION
+    // ===========================
+
+    function Plugin(option) {
+      return this.each(function () {
+        var $this   = $(this)
+        var data    = $this.data('bs.scrollspy')
+        var options = typeof option == 'object' && option
+
+        if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+        if (typeof option == 'string') data[option]()
+      })
+    }
+
+    var old = $.fn.scrollspy
+
+    $.fn.scrollspy             = Plugin
+    $.fn.scrollspy.Constructor = ScrollSpy
+
+
+    // SCROLLSPY NO CONFLICT
+    // =====================
+
+    $.fn.scrollspy.noConflict = function () {
+      $.fn.scrollspy = old
+      return this
+    }
+
+
+    // SCROLLSPY DATA-API
+    // ==================
+
+    $(window).on('load.bs.scrollspy.data-api', function () {
+      $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this)
+        Plugin.call($spy, $spy.data())
+      })
+    })
+
+  }(jQuery);
+</script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0 && isDesktop()) {
+        setTimeout(function () {
+          $('.sidebar-toggle').trigger('click');
+        }, 800);
+      }
+    });
+  </script>
+
+
+
+
+  
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yankai17148"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+  
+</body>
+</html>
