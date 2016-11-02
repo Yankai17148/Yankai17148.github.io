@@ -117,6 +117,110 @@
           
           
             
+              <a class="post-title-link" href="/2016/10/02/一个新的开始-我的新个人网站/">
+                一个新的开始--我的新个人网站
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          
+            发表于 2016-10-02
+          
+        </span>
+
+        
+          
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/10/02/一个新的开始-我的新个人网站/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/02/一个新的开始-我的新个人网站/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    
+      <div class="post-body">
+
+        
+        
+
+        
+          
+            <p><img src="http://og0uvmdvk.bkt.clouddn.com/2016/11/2/QQ20161102-0@2x.png" class="full-image"></p>
+<p>有一段时间没有写东西了，一直被一些杂事缠身，最近终于有空来写写最近的成果了</p>
+<h2 id="两年前">两年前</h2><p>两年前我完成了我的第一个个人网站，一个全部由静态页面组成，JS代码不超过20行，交互几乎等于0的一个“网站”，挂载在一个一年50块的虚拟主机下，那可能是我大学时代最拿得出手的作品了……</p>
+<p>工作之后一直想要把这个网站重构成一个真正的网站，但是由于精力和技术不够，所以一直在搁置，直到今年夏天，经过两年的积累之后，我开始重启了这个项目。</p>
+<h2 id="思路">思路</h2><h3 id="技术栈">技术栈</h3><p>由于这几年公司的项目一直是传统架构，所以我想突破下自己，自己架构一个前后端分离的个人博客，由nodeJS来做后端提供rest API，MongoDB来做数据储存，前端则采用简洁优雅的VueJS来驱动。页面渲染，路由，数据交互全部由前端来接管。</p>
+<h3 id="功能">功能</h3><p>前台没什么好说的，首页会展示最新的博文，有文章列表和详细，会有一个类似于简历的页面，全部是响应式布局。重点在后台，需要登录注册模块，文章的增删改，文章首页图的上传，markdown格式的解析，弹出框交互，验证等等。</p>
+<h2 id="设计">设计</h2><p>我个人有个习惯，就是没设计图做不出页面 <del>这是病，得治</del>，所以就要先出设计图了，大体框架就是参考我的旧网站布局，大幅度的优化页面的效果，加强交互，还有一些新增模块，一个全新的管理后台，构思这些是最耗时间的，开始动手之后反而会很快。</p>
+<h2 id="编码">编码</h2><p>这部分就不展开说了，后端主要就是用 <code>express</code> 搭建的，前端的话是之前提到的 <code>VueJS</code>，以及配套的 <code>vue-router</code>,<code>vue-resource</code>，CSS方面我并没有用现成的CSS框架，用在小型应用上显得太臃肿了，所以全部都自己来写了，代码构建则是用 <code>webpack</code> 来实现自动化编译，前端部分用了ES6语法，所以还加载了 <code>babel</code>，还搭配了一些小的库避免重复造轮子 <del>其实就是懒</del>。</p>
+<h2 id="部署">部署</h2><p>讲真运维真的是我的短板，在linux下配置个nginx我都花了一下午才勉强做好，总体来说就是在一个VPS上搭建了一个nodejs开发环境，服务器使用了nginx做了反向代理。</p>
+<h2 id="Todo">Todo</h2><p>目前这个项目算是跑起来了，功能也基本没问题，之后会加入一些新功能：</p>
+<ul>
+<li>文章标签</li>
+<li>归档</li>
+<li>文章图片的cdn加速</li>
+<li>优化性能</li>
+</ul>
+<h2 id="最后">最后</h2><p>最后当然是扔上项目地址和源码啦！！！</p>
+<p><a href="http://yankaiweb.com" target="_blank" rel="external">个人网站</a></p>
+<p><a href="https://github.com/Yankai17148/Yk-blog" target="_blank" rel="external">源码</a></p>
+
+          
+        
+      </div>
+    
+
+    
+      <div class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Front-end/">
+                #Front-end
+              </a>
+            
+              <a href="/tags/随笔/">
+                #随笔
+              </a>
+            
+          </div>
+        
+
+        
+
+        
+        
+          <div class="post-eof"></div>
+        
+      </div>
+    
+  </div>
+
+
+  
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
               <a class="post-title-link" href="/2016/06/09/DigitalOcean-VPS初体验/">
                 DigitalOcean VPS初体验
               </a>
@@ -761,7 +865,7 @@
       <div class="site-state motion-element">
         <div class="site-state-item site-state-posts">
           <a href="/archives">
-            <span class="site-state-item-count">7</span>
+            <span class="site-state-item-count">8</span>
             <span class="site-state-item-name">日志</span>
           </a>
         </div>
@@ -775,7 +879,7 @@
 
         <div class="site-state-item site-state-tags">
           <a href="/tags">
-            <span class="site-state-item-count">8</span>
+            <span class="site-state-item-count">10</span>
             <span class="site-state-item-name">标签</span>
           </a>
         </div>
