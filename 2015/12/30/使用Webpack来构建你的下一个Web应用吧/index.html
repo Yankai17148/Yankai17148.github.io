@@ -1,147 +1,328 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-next">
-<head>
+<!DOCTYPE html>
+
+
+
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.1"/>
-
-
-    <meta name="description" content="html | javascript | css | front-end" />
 
 
 
-	<meta name="keywords" content="Front-End,Javascript,项目构建," />
 
-  <title> 使用Webpack来构建你的下一个Web应用吧 // Just Relax </title>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Front-End,Javascript,项目构建," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="什么是webpackwebpack是一款模块加载以及代码打包的前端工具，它可以将项目中应用到的静态资源分别解析打包，大有完全替代grunt和gulp之势。 webpack的优势 webpack以CommonJS形式书写脚本，但是对AMD/CMD的支持也很全面； 不光可以模块化JS，CSS，甚至是图片资源都可以被模块化；">
+<meta name="keywords" content="Front-End,Javascript,项目构建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Webpack来构建你的下一个Web应用吧">
+<meta property="og:url" content="http://Yankai17148.github.io/2015/12/30/使用Webpack来构建你的下一个Web应用吧/index.html">
+<meta property="og:site_name" content="Just Relax">
+<meta property="og:description" content="什么是webpackwebpack是一款模块加载以及代码打包的前端工具，它可以将项目中应用到的静态资源分别解析打包，大有完全替代grunt和gulp之势。 webpack的优势 webpack以CommonJS形式书写脚本，但是对AMD/CMD的支持也很全面； 不光可以模块化JS，CSS，甚至是图片资源都可以被模块化； 开发便捷，可以代替大部分grunt/gulp的工作，例如打包，代码混淆，压缩">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7d9m2k.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720151230113744.png">
+<meta property="og:updated_time" content="2015-12-31T16:11:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Webpack来构建你的下一个Web应用吧">
+<meta name="twitter:description" content="什么是webpackwebpack是一款模块加载以及代码打包的前端工具，它可以将项目中应用到的静态资源分别解析打包，大有完全替代grunt和gulp之势。 webpack的优势 webpack以CommonJS形式书写脚本，但是对AMD/CMD的支持也很全面； 不光可以模块化JS，CSS，甚至是图片资源都可以被模块化； 开发便捷，可以代替大部分grunt/gulp的工作，例如打包，代码混淆，压缩">
+<meta name="twitter:image" content="http://7d9m2k.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720151230113744.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://Yankai17148.github.io/2015/12/30/使用Webpack来构建你的下一个Web应用吧/"/>
+
+
+
+
+
+  <title>使用Webpack来构建你的下一个Web应用吧 | Just Relax</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
-<body>
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">Just Relax</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-
-  <ul id="menu" class="menu">
+  
+  
     
-    
-      
-      <li class="menu-item menu-item-home">
-        <a href="/">
-          <i class="menu-item-icon icon-home"></i> <br />
-          首页
-        </a>
-      </li>
-    
-      
-      <li class="menu-item menu-item-archives">
-        <a href="/archives">
-          <i class="menu-item-icon icon-archives"></i> <br />
-          归档
-        </a>
-      </li>
-    
-      
-      <li class="menu-item menu-item-tags">
-        <a href="/tags">
-          <i class="menu-item-icon icon-tags"></i> <br />
-          标签
-        </a>
-      </li>
-    
-      
-      <li class="menu-item menu-item-about">
-        <a href="/about">
-          <i class="menu-item-icon icon-about"></i> <br />
-          关于
-        </a>
-      </li>
-    
-  </ul>
-
-
-      </div>
-    </div>
-
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-            
-          
-
-          <div id="posts" class="posts-expand">
-            
   
 
-  <div class="post post-type-normal ">
-    <div class="post-header">
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
 
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              使用Webpack来构建你的下一个Web应用吧
-            
-          
-        </h1>
-      
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-      <div class="post-meta">
-        <span class="post-time">
-          
-            发表于 2015-12-30
-          
-        </span>
-
-        
-          
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/2015/12/30/使用Webpack来构建你的下一个Web应用吧/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/使用Webpack来构建你的下一个Web应用吧/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Just Relax</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
+      
+        <p class="site-subtitle">YankaideBlog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Yankai17148.github.io/2015/12/30/使用Webpack来构建你的下一个Web应用吧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yan Kai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just Relax">
+    </span>
 
     
-      <div class="post-body">
+      <header class="post-header">
 
         
         
-
+          <h1 class="post-title" itemprop="name headline">使用Webpack来构建你的下一个Web应用吧</h1>
         
-          <p><img src="http://7d9m2k.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720151230113744.png" class="full-image"></p>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-30T11:12:40+08:00">
+                2015-12-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/12/30/使用Webpack来构建你的下一个Web应用吧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/30/使用Webpack来构建你的下一个Web应用吧/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://7d9m2k.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720151230113744.png" class="full-image"></p>
 <h2 id="什么是webpack">什么是webpack</h2><p>webpack是一款模块加载以及代码打包的前端工具，它可以将项目中应用到的静态资源分别解析打包，大有完全替代grunt和gulp之势。</p>
 <h3 id="webpack的优势">webpack的优势</h3><ul>
 <li>webpack以CommonJS形式书写脚本，但是对AMD/CMD的支持也很全面；</li>
@@ -149,9 +330,9 @@
 <li>开发便捷，可以代替大部分grunt/gulp的工作，例如打包，代码混淆，压缩，图片转base64等等；<a id="more"></a>
 </li>
 </ul>
-<h2 id="开始">开始</h2><p>webpack是基于nodejs开发的，所以在安装webpack之前确认你是否安装了nodejs和npm，之后我们需要全局安装webpack。<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm <span class="keyword">install</span> webpack -g</span><br></pre></td></tr></table></figure></p>
-<p>这时就可以在终端使用webpack命令行工具了。<br>新建一个文件夹作为项目的根目录，引入 <code>package.json</code><br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> webpack</span><br><span class="line"><span class="built_in">cd</span> webpack</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
-<p>在项目的目录下安装一下webpack<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="开始">开始</h2><p>webpack是基于nodejs开发的，所以在安装webpack之前确认你是否安装了nodejs和npm，之后我们需要全局安装webpack。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install webpack -g</span><br></pre></td></tr></table></figure></p>
+<p>这时就可以在终端使用webpack命令行工具了。<br>新建一个文件夹作为项目的根目录，引入 <code>package.json</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack</span><br><span class="line">cd webpack</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
+<p>在项目的目录下安装一下webpack<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack --save-dev</span><br></pre></td></tr></table></figure></p>
 <p>同时在项目的根目录下创建一个 <code>webpack.config.js</code> 的文件，就像 <code>gulpfile.js</code> 那样。</p>
 <h2 id="目录结构">目录结构</h2><p>这时候我们就可以开始给项目添加一些内容了</p>
 <ul>
@@ -165,752 +346,375 @@
 <li>package.json</li>
 <li>webpack.config.js<br>我们在项目中添加了一个src文件夹用来存放项目源码，里面放入了两个js文件以及一个css文件，之后就可以开始编码了</li>
 </ul>
-<h2 id="代码">代码</h2><h4 id="components-js">components.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createTitle</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> el = <span class="built_in">document</span>.createElement(<span class="string">'h3'</span>);</span><br><span class="line">	el.innerHTML = <span class="string">'Hello world'</span>;</span><br><span class="line">	<span class="keyword">return</span> el;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = createTitle;</span><br></pre></td></tr></table></figure>
-<h4 id="main-js">main.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> components = <span class="built_in">require</span>(<span class="string">'components'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./app.css'</span>) <span class="comment">//这里可以直接在JS文件中引入css文件</span></span><br><span class="line"><span class="keyword">var</span> app = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">app.innerHTML = <span class="string">'&lt;h1&gt;Hello Webpack&lt;/h1&gt;'</span>;</span><br><span class="line">app.appendChild(components());</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(app);</span><br></pre></td></tr></table></figure>
-<h4 id="app-css">app.css</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*<span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">h1</span>, <span class="tag">h2</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">font-weight</span>:<span class="value">normal</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">text-align</span>:<span class="value">center</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">h1</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">20px</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#333</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">h2</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">14px</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">color</span>:<span class="value"><span class="hexcolor">#999</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="代码">代码</h2><h4 id="components-js">components.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function createTitle()&#123;</span><br><span class="line">	var el = document.createElement(&apos;h3&apos;);</span><br><span class="line">	el.innerHTML = &apos;Hello world&apos;;</span><br><span class="line">	return el;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = createTitle;</span><br></pre></td></tr></table></figure>
+<h4 id="main-js">main.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var components = require(&apos;components&apos;);</span><br><span class="line">require(&apos;./app.css&apos;) //这里可以直接在JS文件中引入css文件</span><br><span class="line">var app = document.createElement(&apos;div&apos;);</span><br><span class="line">app.innerHTML = &apos;&lt;h1&gt;Hello Webpack&lt;/h1&gt;&apos;;</span><br><span class="line">app.appendChild(components());</span><br><span class="line">document.body.appendChild(app);</span><br></pre></td></tr></table></figure>
+<h4 id="app-css">app.css</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	margin:0;</span><br><span class="line">	padding:0;</span><br><span class="line">&#125;</span><br><span class="line">h1, h2&#123;</span><br><span class="line">	font-weight:normal;</span><br><span class="line">	text-align:center;</span><br><span class="line">&#125;</span><br><span class="line">h1&#123;</span><br><span class="line">	font-size:20px;</span><br><span class="line">	color:#333;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2&#123;</span><br><span class="line">	font-size:14px;</span><br><span class="line">	color:#999;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里的代码实现了一个很简单的功能，创建了一个模块，在主文件里引用它，同时添加了一些样式，最后会在页面里显示两个标题，至此，基本工作就完成了，下面就开始重头戏：配置webpack了。</p>
 <h2 id="配置webpack">配置webpack</h2><p>这时候就可以开始配置webpack了，目标是把两个js文件合并到一起命名为 <code>app.js</code> 放入一个build文件夹中，这时候我们就可以新建一个 <code>index.html</code> 并引入构建后的文件。<br>好，开始写config文件</p>
-<h3 id="基本配置">基本配置</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//webpack.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//这里定义了一些路径</span></span><br><span class="line"><span class="keyword">const</span> ROOT_PATH = path.resolve(__dirname);</span><br><span class="line"><span class="keyword">const</span> APP_PATH = path.resolve(ROOT_PATH, <span class="string">'src'</span>);</span><br><span class="line"><span class="keyword">const</span> BUILD_PATH = path.resolve(ROOT_PATH, <span class="string">'build'</span>);</span><br><span class="line"></span><br><span class="line"><span class="module"><span class="keyword">module</span>.exports = </span>&#123;</span><br><span class="line">	<span class="comment">//项目的入口</span></span><br><span class="line">	entry: &#123;</span><br><span class="line">		app: [<span class="string">'./src/main.js'</span>]</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="comment">//项目的输出设置</span></span><br><span class="line">	output: &#123;</span><br><span class="line">		path: BUILD_PATH,</span><br><span class="line">		filename: <span class="string">'[name].js'</span>,</span><br><span class="line">		publicPath: <span class="string">'/build/'</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接下来我们安装 <code>style-loader</code> 和 <code>css-loader</code> 来处理代码中的css文件。<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install style-loader css-loader --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p>
-<p>css-loader的作用是将css代码中的url(…)遍历出来做处理，style-loader会把所有的样式插入到页面的一个style tag中。<br>之后在webpack中配置loader<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">output:</span> &#123;</span><br><span class="line"><span class="label">	path:</span> BUILD_PATH,</span><br><span class="line"><span class="label">	filename:</span> <span class="string">'[name].js'</span>,</span><br><span class="line"><span class="label">	publicPath:</span> <span class="string">'/build/'</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">module:</span> &#123;</span><br><span class="line"><span class="label">	loaders:</span> [</span><br><span class="line">		&#123;<span class="string">test:</span> <span class="regexp">/\.css$/</span>, <span class="string">loader:</span> <span class="string">'style!css'</span>&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>配置loader的写法，test的值为一个正则，匹配特定后缀的文件，loader属性定义处理文件的loader，多个loader中间可以用 <code>!</code> 连接，注意loader的执行顺序是从左到右的。<br>这时候就可以在根目录下运行webpack了<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack</span><br></pre></td></tr></table></figure></p>
+<h3 id="基本配置">基本配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//webpack.config.js</span><br><span class="line"></span><br><span class="line">var path = require(&apos;path&apos;);</span><br><span class="line">var webpack = require(&apos;webpack&apos;);</span><br><span class="line"></span><br><span class="line">//这里定义了一些路径</span><br><span class="line">const ROOT_PATH = path.resolve(__dirname);</span><br><span class="line">const APP_PATH = path.resolve(ROOT_PATH, &apos;src&apos;);</span><br><span class="line">const BUILD_PATH = path.resolve(ROOT_PATH, &apos;build&apos;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">	//项目的入口</span><br><span class="line">	entry: &#123;</span><br><span class="line">		app: [&apos;./src/main.js&apos;]</span><br><span class="line">	&#125;,</span><br><span class="line">	//项目的输出设置</span><br><span class="line">	output: &#123;</span><br><span class="line">		path: BUILD_PATH,</span><br><span class="line">		filename: &apos;[name].js&apos;,</span><br><span class="line">		publicPath: &apos;/build/&apos;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下来我们安装 <code>style-loader</code> 和 <code>css-loader</code> 来处理代码中的css文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install style-loader css-loader --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>css-loader的作用是将css代码中的url(…)遍历出来做处理，style-loader会把所有的样式插入到页面的一个style tag中。<br>之后在webpack中配置loader<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">output: &#123;</span><br><span class="line">	path: BUILD_PATH,</span><br><span class="line">	filename: &apos;[name].js&apos;,</span><br><span class="line">	publicPath: &apos;/build/&apos;</span><br><span class="line">&#125;,</span><br><span class="line">module: &#123;</span><br><span class="line">	loaders: [</span><br><span class="line">		&#123;test: /\.css$/, loader: &apos;style!css&apos;&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>配置loader的写法，test的值为一个正则，匹配特定后缀的文件，loader属性定义处理文件的loader，多个loader中间可以用 <code>!</code> 连接，注意loader的执行顺序是从左到右的。<br>这时候就可以在根目录下运行webpack了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack</span><br></pre></td></tr></table></figure></p>
 <p>这时终端会显示一大堆花花绿绿的代码然后提示你成功了，然后你打开目录下的index.html就会看到屏幕上输出了两段文字以及他们对应的样式了。</p>
-<h3 id="提取css样式为单独的文件">提取css样式为单独的文件</h3><p>有时候我们并不想让css全部加载到html页面中，这时我们可以将css提取为单独的文件，这需要载入一个webpack插件 <code>extract-text-webpack-plugin</code><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> <span class="keyword">extract</span>-<span class="built_in">text</span>-webpack-<span class="keyword">plugin</span> <span class="comment">--save-dev</span></span></span><br></pre></td></tr></table></figure></p>
+<h3 id="提取css样式为单独的文件">提取css样式为单独的文件</h3><p>有时候我们并不想让css全部加载到html页面中，这时我们可以将css提取为单独的文件，这需要载入一个webpack插件 <code>extract-text-webpack-plugin</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install extract-text-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure></p>
 <p>在webpack文件中加载它</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="reserved">var</span> ExtractTextPlugin = <span class="built_in">require</span>(<span class="string">'extract-text-webpack-plugin'</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);</span><br></pre></td></tr></table></figure>
 <p>然后修改一下loader配置以及添加一个插件设置</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">module:</span> &#123;</span><br><span class="line"><span class="label">	loaders:</span> [</span><br><span class="line">		&#123;<span class="string">test:</span> <span class="regexp">/\.css$/</span>, <span class="string">loader:</span> ExtractTextPlugin.extract(<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>)&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">plugins:</span> [</span><br><span class="line">	<span class="comment">//将css文件打包到app.css中</span></span><br><span class="line">	<span class="keyword">new</span> ExtractTextPlugin(<span class="string">'app.css'</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">module: &#123;</span><br><span class="line">	loaders: [</span><br><span class="line">		&#123;test: /\.css$/, loader: ExtractTextPlugin.extract(&apos;style-loader&apos;, &apos;css-loader&apos;)&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;,</span><br><span class="line">plugins: [</span><br><span class="line">	//将css文件打包到app.css中</span><br><span class="line">	new ExtractTextPlugin(&apos;app.css&apos;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>这时候我们重新运行一下webpack，css文件就会打包到app.css里了，在页面中直接引用即可</p>
-<h3 id="添加第三方库">添加第三方库</h3><p>开发自然少不了添加第三方的库，webpack中添加第三方库也很简单。以jQuery为例：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> jquery <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure></p>
-<p>在js文件中引用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> components = <span class="built_in">require</span>(<span class="string">'components'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./app.css'</span>)；</span><br><span class="line"><span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</span><br><span class="line"><span class="keyword">var</span> app = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">app.innerHTML = <span class="string">'&lt;h1&gt;Hello Webpack&lt;/h1&gt;'</span>;</span><br><span class="line">app.appendChild(components());</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(app);</span><br><span class="line">$(<span class="string">'h1'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">	$(<span class="keyword">this</span>).animate(&#123;</span><br><span class="line">		<span class="string">'font-size'</span>: <span class="number">30</span>,</span><br><span class="line">		<span class="string">'height'</span>: <span class="number">50</span></span><br><span class="line">	&#125;, <span class="number">500</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'end!'</span>);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="添加第三方库">添加第三方库</h3><p>开发自然少不了添加第三方的库，webpack中添加第三方库也很简单。以jQuery为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery --save</span><br></pre></td></tr></table></figure></p>
+<p>在js文件中引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var components = require(&apos;components&apos;);</span><br><span class="line">require(&apos;./app.css&apos;)；</span><br><span class="line">var $ = require(&apos;jquery&apos;);</span><br><span class="line">var app = document.createElement(&apos;div&apos;);</span><br><span class="line">app.innerHTML = &apos;&lt;h1&gt;Hello Webpack&lt;/h1&gt;&apos;;</span><br><span class="line">app.appendChild(components());</span><br><span class="line">document.body.appendChild(app);</span><br><span class="line">$(&apos;h1&apos;).on(&apos;click&apos;, function()&#123;</span><br><span class="line">	$(this).animate(&#123;</span><br><span class="line">		&apos;font-size&apos;: 30,</span><br><span class="line">		&apos;height&apos;: 50</span><br><span class="line">	&#125;, 500, function()&#123;</span><br><span class="line">		console.log(&apos;end!&apos;);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>这里我们还有两个顾虑：</p>
 <ol>
 <li>将第三方库和网站脚本打包到一个js文件中会使js文件特别大，造成加载慢的现象；</li>
-<li>像jQuery这样的常用库开发时每个js文件都要require一次，很麻烦。<br>接下来就来解决这两个问题，在webpack.config.js中添加如下代码：<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">entry:</span> &#123;</span><br><span class="line"><span class="label">	app:</span> [<span class="string">'./src/main.js'</span>],</span><br><span class="line">	<span class="comment">//设置一个vender数组，里面是第三方库</span></span><br><span class="line"><span class="label">	venders:</span> [<span class="string">'jquery'</span>]</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br><span class="line"><span class="string">plugins:</span> [</span><br><span class="line">	<span class="keyword">new</span> ExtractTextPlugin(<span class="string">'app.css'</span>),</span><br><span class="line">	<span class="comment">//将venders数组下的第三方库统一打包为一个venders.js的文件</span></span><br><span class="line">	<span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="string">'venders'</span>, <span class="string">'venders.js'</span>)，</span><br><span class="line">	<span class="comment">//统一在所有地方加载jquery</span></span><br><span class="line">	<span class="keyword">new</span> webpack.ProvidePlugin(&#123;<span class="string">$:</span> <span class="string">'jquery'</span>&#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<li>像jQuery这样的常用库开发时每个js文件都要require一次，很麻烦。<br>接下来就来解决这两个问题，在webpack.config.js中添加如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">	app: [&apos;./src/main.js&apos;],</span><br><span class="line">	//设置一个vender数组，里面是第三方库</span><br><span class="line">	venders: [&apos;jquery&apos;]</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">	new ExtractTextPlugin(&apos;app.css&apos;),</span><br><span class="line">	//将venders数组下的第三方库统一打包为一个venders.js的文件</span><br><span class="line">	new webpack.optimize.CommonsChunkPlugin(&apos;venders&apos;, &apos;venders.js&apos;)，</span><br><span class="line">	//统一在所有地方加载jquery</span><br><span class="line">	new webpack.ProvidePlugin(&#123;$: &apos;jquery&apos;&#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="配置webpack-dev-server">配置webpack-dev-server</h3><p>每次写完一段代码我们都需要去运行一次webpack然后去刷新页面查看效果，所以我们就需要一个开发服务器，可以监听我们的代码变动，然后去自动编译以及刷新浏览器。<br>安装webpack-dev-server<br><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-<span class="built_in">dev</span>-server --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure></p>
-<p>在webpack.config.js中添加<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module<span class="built_in">.</span>exports <span class="subst">=</span> &#123;</span><br><span class="line"><span class="attribute">...</span></span><br><span class="line">devServer: &#123;</span><br><span class="line">	historyApiFallback: <span class="literal">true</span>,</span><br><span class="line">	hot: <span class="literal">true</span>,</span><br><span class="line">	<span class="keyword">inline</span>: <span class="literal">true</span>,</span><br><span class="line">	progress: <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置webpack-dev-server">配置webpack-dev-server</h3><p>每次写完一段代码我们都需要去运行一次webpack然后去刷新页面查看效果，所以我们就需要一个开发服务器，可以监听我们的代码变动，然后去自动编译以及刷新浏览器。<br>安装webpack-dev-server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-dev-server --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>在webpack.config.js中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">...</span><br><span class="line">devServer: &#123;</span><br><span class="line">	historyApiFallback: true,</span><br><span class="line">	hot: true,</span><br><span class="line">	inline: true,</span><br><span class="line">	progress: true</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>然后再 <code>package.json</code> 中配置一下运行的命令， npm支持自定义命令</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"script"</span>: &#123;</span><br><span class="line">	<span class="string">"dev"</span>: <span class="string">"webpack-dev-server --hot --inline"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;script&quot;: &#123;</span><br><span class="line">	&quot;dev&quot;: &quot;webpack-dev-server --hot --inline&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在项目根目录下执行 <code>npm run dev</code> 一大堆代码闪过之后本地服务器就启动起来了，这时候在浏览器中输入 <code>localhost:8080</code> ， 你就发现编译好的代码已经跑起来了，试着改动一下js文件，保存后浏览器就会自动更新你的改动。</p>
 <h2 id="结语">结语</h2><p>以上只是webpack的一个基本用法，它还有很多强大的功能，它与现在的流行框架配合的相当好，例如 <code>react</code>， <code>vuejs</code> 等等，能使开发者脱离一些重复枯燥的工作，专注于开发。</p>
-<h3 id="连接">连接</h3><p>以上的代码已经放在了我的Github上，有兴趣可以Clone一下 &gt;&gt; <a href="https://github.com/Yankai17148/simple-webpack" target="_blank" rel="external">simple-webpack
+<h3 id="连接">连接</h3><p>以上的代码已经放在了我的Github上，有兴趣可以Clone一下 &gt;&gt; <a href="https://github.com/Yankai17148/simple-webpack" target="_blank" rel="noopener">simple-webpack
 </a></p>
 
-        
-      </div>
+      
+    </div>
+    
+    
     
 
     
-      <div class="post-footer">
-        
-          <div class="post-tags">
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Front-End/" rel="tag"># Front-End</a>
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+            <a href="/tags/项目构建/" rel="tag"># 项目构建</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <a href="/tags/Front-End/">
-                #Front-End
-              </a>
-            
-              <a href="/tags/Javascript/">
-                #Javascript
-              </a>
-            
-              <a href="/tags/项目构建/">
-                #项目构建
+              <a href="/2015/06/15/使用命令行工具操作文件与目录/" rel="next" title="使用命令行工具操作文件与目录">
+                <i class="fa fa-chevron-left"></i> 使用命令行工具操作文件与目录
               </a>
             
           </div>
-        
 
-        
-          <div class="post-nav">
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2016/06/09/DigitalOcean-VPS初体验/">DigitalOcean VPS初体验</a>
-              
-            </div>
+          <span class="post-nav-divider"></span>
 
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2015/06/15/使用命令行工具操作文件与目录/">使用命令行工具操作文件与目录</a>
-              
-            </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/09/DigitalOcean-VPS初体验/" rel="prev" title="DigitalOcean VPS初体验">
+                DigitalOcean VPS初体验 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
-        
+        </div>
+      
 
-        
-        
-      </div>
-    
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
+          </div>
+          
 
+
+          
   
     <div class="comments" id="comments">
-      
-        <div class="ds-thread" data-thread-key="2015/12/30/使用Webpack来构建你的下一个Web应用吧/"
-             data-title="使用Webpack来构建你的下一个Web应用吧" data-url="http://Yankai17148.github.io/2015/12/30/使用Webpack来构建你的下一个Web应用吧/">
-        </div>
-
-      
+      <div class="ds-thread" data-thread-key="2015/12/30/使用Webpack来构建你的下一个Web应用吧/"
+           data-title="使用Webpack来构建你的下一个Web应用吧" data-url="http://Yankai17148.github.io/2015/12/30/使用Webpack来构建你的下一个Web应用吧/">
+      </div>
     </div>
   
 
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Yan Kai</p>
+              <p class="site-description motion-element" itemprop="description">html | javascript | css | front-end</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Yankai17148" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/Yankai6" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-globe"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/1608580297/" target="_blank" title="Weibo">
+                    
+                      <i class="fa fa-fw fa-globe"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/yan-kai-3" target="_blank" title="ZhiHu">
+                    
+                      <i class="fa fa-fw fa-globe"></i>ZhiHu</a>
+                </span>
+              
+            
           </div>
 
           
-        </div>
-
-        
-<div class="sidebar-toggle">
-  <div class="sidebar-toggle-line-wrap">
-    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-  </div>
-</div>
-
-<div id="sidebar" class="sidebar">
-  <div class="sidebar-inner">
-
-    
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview" data-target="site-overview">
-          站点概览
-        </li>
-      </ul>
-    
-
-    <div class="site-overview">
-      <div class="site-author motion-element">
-        <img class="site-author-image" src="/images/default_avatar.jpg" alt="Yan Kai" />
-        <p class="site-author-name">Yan Kai</p>
-      </div>
-      <p class="site-description motion-element">html | javascript | css | front-end</p>
-      <div class="site-state motion-element">
-        <div class="site-state-item site-state-posts">
-          <a href="/archives">
-            <span class="site-state-item-count">8</span>
-            <span class="site-state-item-name">日志</span>
-          </a>
-        </div>
-
-        <div class="site-state-item site-state-categories">
           
-            <span class="site-state-item-count">0</span>
-            <span class="site-state-item-name">分类</span>
+
           
-        </div>
+          
 
-        <div class="site-state-item site-state-tags">
-          <a href="/tags">
-            <span class="site-state-item-count">10</span>
-            <span class="site-state-item-name">标签</span>
-          </a>
-        </div>
+          
 
-      </div>
+        </div>
+      </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
 
-      <div class="links-of-author motion-element">
-        
-          
-            <span class="links-of-author-item">
-              <a href="https://github.com/Yankai17148" target="_blank">GitHub</a>
-            </span>
-          
-            <span class="links-of-author-item">
-              <a href="https://twitter.com/Yankai6" target="_blank">Twitter</a>
-            </span>
-          
-            <span class="links-of-author-item">
-              <a href="http://weibo.com/1608580297/" target="_blank">Weibo</a>
-            </span>
-          
-            <span class="links-of-author-item">
-              <a href="http://www.zhihu.com/people/yan-kai-3" target="_blank">ZhiHu</a>
-            </span>
-          
-        
-      </div>
+            
+              
+            
 
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是webpack"><span class="nav-number">1.</span> <span class="nav-text">什么是webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack的优势"><span class="nav-number">1.1.</span> <span class="nav-text">webpack的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">3.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-js"><span class="nav-number">4.0.1.</span> <span class="nav-text">components.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main-js"><span class="nav-number">4.0.2.</span> <span class="nav-text">main.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#app-css"><span class="nav-number">4.0.3.</span> <span class="nav-text">app.css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack"><span class="nav-number">5.</span> <span class="nav-text">配置webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">5.1.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取css样式为单独的文件"><span class="nav-number">5.2.</span> <span class="nav-text">提取css样式为单独的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加第三方库"><span class="nav-number">5.3.</span> <span class="nav-text">添加第三方库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-dev-server"><span class="nav-number">5.4.</span> <span class="nav-text">配置webpack-dev-server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接"><span class="nav-number">6.1.</span> <span class="nav-text">连接</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
+
       
 
     </div>
+  </aside>
 
-    
-      <div class="post-toc-wrap sidebar-panel-active">
-        <div class="post-toc-indicator-top post-toc-indicator"></div>
-        <div class="post-toc">
-          
-          
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是webpack"><span class="nav-number">1.</span> <span class="nav-text">什么是webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack的优势"><span class="nav-number">1.1.</span> <span class="nav-text">webpack的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录结构"><span class="nav-number">3.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-js"><span class="nav-number">4.0.1.</span> <span class="nav-text">components.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main-js"><span class="nav-number">4.0.2.</span> <span class="nav-text">main.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#app-css"><span class="nav-number">4.0.3.</span> <span class="nav-text">app.css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack"><span class="nav-number">5.</span> <span class="nav-text">配置webpack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">5.1.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取css样式为单独的文件"><span class="nav-number">5.2.</span> <span class="nav-text">提取css样式为单独的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加第三方库"><span class="nav-number">5.3.</span> <span class="nav-text">添加第三方库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-dev-server"><span class="nav-number">5.4.</span> <span class="nav-text">配置webpack-dev-server</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接"><span class="nav-number">6.1.</span> <span class="nav-text">连接</span></a></li></ol></li></ol></div>
-          
-        </div>
-        <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+
+        
       </div>
-    
+    </main>
 
-  </div>
-</div>
-
-
-      </div>
-    </div>
-
-    <div id="footer" class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">
-  
-  &copy; &nbsp;  2014 - 
-  2016
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
-  <span class="author">Yan Kai</span>
-</div>
+  <span class="author" itemprop="copyrightHolder">Yan Kai</span>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
+  
 </div>
 
 
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
       </div>
-    </div>
+    </footer>
 
-    <div class="back-to-top"></div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.content img').each(function () {
-        var $image = $(this);
-        var $imageWrapLink = $image.parent('a');
-
-        if ($imageWrapLink.size() < 1) {
-          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
-        }
-        $imageWrapLink.addClass('fancybox');
-      });
-    });
-    $('.fancybox').fancybox({
-      helpers: {
-        overlay: {
-          locked: false
-        }
-      }
-    });
-  </script>
-
-
-  <script type="text/javascript">
-  function hasMobileUA () {
-    var nav = window.navigator;
-    var ua = nav.userAgent;
-    var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
-
-    return pa.test(ua);
-  }
-
-  function isDesktop () {
-    return screen.width > 991 && !hasMobileUA();
-  }
-
-  function isTablet () {
-    return screen.width < 992 && screen.width > 767 && hasMobileUA();
-  }
-
-  function isMobile () {
-    return screen.width < 767 && hasMobileUA();
-  }
-
-  function escapeSelector (selector) {
-    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
 </script>
 
-  
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" id="motion.global">
-  $(document).ready(function () {
-    var body = $('body');
-    var isSidebarVisible = false;
-    var sidebarToggle = $('.sidebar-toggle');
-    var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
-    var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
-    var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
-    var sidebar = $('.sidebar');
-
-    var SIDEBAR_WIDTH = '320px';
-    var SIDEBAR_DISPLAY_DURATION = 300;
-
-    var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
-
-    var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
-    var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
-
-    var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine2ndStatusArrow = {width: '90%'};
-    var sidebarToogleLine2ndStatusClose = {opacity: 0};
-
-    var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
-    var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
-    var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
-
-    LogoAndMenuMotion();
-    sidebatToggleMotion();
-    postsListMotion();
-    backToTopMotion();
 
 
-    $(document)
-      .on('sidebar.isShowing', function () {
-        isDesktop() && body.velocity(
-          {paddingRight: SIDEBAR_WIDTH},
-          SIDEBAR_DISPLAY_DURATION
-        );
-        sidebarContentMotion();
-      })
-      .on('sidebar.isHiding', function () {});
 
-    function LogoAndMenuMotion() {
-      $.Velocity.RunSequence([
-        { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
-        { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
-        
-        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
-        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
-        
-        { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
-      ]);
-      $('.menu-item').velocity('transition.slideDownIn', {display: null});
-    }
-
-
-    function backToTopMotion () {
-      var b2top = $('.back-to-top');
-      b2top.on('click', function () {
-        body.velocity('scroll');
-      });
-    }
-
-    function sidebarShowMotion () {
-
-      sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
-      sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
-      sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
-
-      sidebar.velocity({width: SIDEBAR_WIDTH}, {
-        display: 'block',
-        duration: SIDEBAR_DISPLAY_DURATION,
-        complete: function () {
-          sidebar.addClass('sidebar-active');
-          sidebar.trigger('sidebar.didShow');
-        }
-      });
-      sidebar.trigger('sidebar.isShowing');
-    }
-
-    function sidebarHideMotion () {
-      isDesktop() && body.velocity({paddingRight: 0});
-      sidebar.velocity('reverse');
-
-      sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
-      sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
-
-      sidebar.removeClass('sidebar-active');
-      sidebar.trigger('sidebar.isHiding');
-    };
-
-    function sidebarContentMotion () {
-      $('.sidebar .motion-element').velocity(
-        'transition.slideRightIn',
-        {stagger: 50, drag: true}
-      );
-    }
-
-    function postsListMotion () {
-      var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
-      $('.post').velocity('transition.slideDownIn', postMotionOptions);
-    }
-
-    function sidebatToggleMotion () {
-      sidebarToggle.on('click', function () {
-        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
-        isSidebarVisible = !isSidebarVisible;
-      });
-
-      sidebarToggle.hover(function () {
-        if (isSidebarVisible) {return}
-        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
-        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
-        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
-      }, function () {
-        if (isSidebarVisible) {return}
-        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
-        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
-        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
-      });
-    }
-  });
-
-</script>
 
 
 
 
 
   
-  
-<script type="text/javascript" id="bootstrap.scrollspy.custom">
-  /* ========================================================================
-  * Bootstrap: scrollspy.js v3.3.2
-  * http://getbootstrap.com/javascript/#scrollspy
-  * ========================================================================
-  * Copyright 2011-2015 Twitter, Inc.
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-  * ======================================================================== */
 
-  /**
-   * Custom by iissnan
-   *
-   * - Add a `clear.bs.scrollspy` event.
-   * - Esacpe targets selector.
-   */
 
 
-  +function ($) {
-    'use strict';
 
-    // SCROLLSPY CLASS DEFINITION
-    // ==========================
 
-    function ScrollSpy(element, options) {
-      this.$body          = $(document.body)
-      this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
-      this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
-      this.selector       = (this.options.target || '') + ' .nav li > a'
-      this.offsets        = []
-      this.targets        = []
-      this.activeTarget   = null
-      this.scrollHeight   = 0
 
-      this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
-      this.refresh()
-      this.process()
-    }
 
-    ScrollSpy.VERSION  = '3.3.2'
 
-    ScrollSpy.DEFAULTS = {
-      offset: 10
-    }
-
-    ScrollSpy.prototype.getScrollHeight = function () {
-      return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
-    }
-
-    ScrollSpy.prototype.refresh = function () {
-      var that          = this
-      var offsetMethod  = 'offset'
-      var offsetBase    = 0
-
-      this.offsets      = []
-      this.targets      = []
-      this.scrollHeight = this.getScrollHeight()
-
-      if (!$.isWindow(this.$scrollElement[0])) {
-        offsetMethod = 'position'
-        offsetBase   = this.$scrollElement.scrollTop()
-      }
-
-      this.$body
-        .find(this.selector)
-        .map(function () {
-          var $el   = $(this)
-          var href  = $el.data('target') || $el.attr('href')
-          var $href = /^#./.test(href) && $(escapeSelector(href)) // Need to escape selector.
-
-          return ($href
-            && $href.length
-            && $href.is(':visible')
-            && [[$href[offsetMethod]().top + offsetBase, href]]) || null
-        })
-        .sort(function (a, b) { return a[0] - b[0] })
-        .each(function () {
-          that.offsets.push(this[0])
-          that.targets.push(this[1])
-        })
-
-
-    }
-
-    ScrollSpy.prototype.process = function () {
-      var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
-      var scrollHeight = this.getScrollHeight()
-      var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
-      var offsets      = this.offsets
-      var targets      = this.targets
-      var activeTarget = this.activeTarget
-      var i
-
-      if (this.scrollHeight != scrollHeight) {
-        this.refresh()
-      }
-
-      if (scrollTop >= maxScroll) {
-        return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
-      }
-
-      if (activeTarget && scrollTop < offsets[0]) {
-        $(this.selector).trigger('clear.bs.scrollspy')  // Add a custom event.
-        this.activeTarget = null
-        return this.clear()
-      }
-
-      for (i = offsets.length; i--;) {
-        activeTarget != targets[i]
-          && scrollTop >= offsets[i]
-          && (!offsets[i + 1] || scrollTop <= offsets[i + 1])
-          && this.activate(targets[i])
-      }
-    }
-
-    ScrollSpy.prototype.activate = function (target) {
-      this.activeTarget = target
-
-      this.clear()
-
-      var selector = this.selector +
-        '[data-target="' + target + '"],' +
-        this.selector + '[href="' + target + '"]'
-
-      var active = $(selector)
-        .parents('li')
-        .addClass('active')
-
-      if (active.parent('.dropdown-menu').length) {
-        active = active
-          .closest('li.dropdown')
-          .addClass('active')
-      }
-
-      active.trigger('activate.bs.scrollspy')
-    }
-
-    ScrollSpy.prototype.clear = function () {
-      $(this.selector)
-        .parentsUntil(this.options.target, '.active')
-        .removeClass('active')
-    }
-
-
-    // SCROLLSPY PLUGIN DEFINITION
-    // ===========================
-
-    function Plugin(option) {
-      return this.each(function () {
-        var $this   = $(this)
-        var data    = $this.data('bs.scrollspy')
-        var options = typeof option == 'object' && option
-
-        if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
-        if (typeof option == 'string') data[option]()
-      })
-    }
-
-    var old = $.fn.scrollspy
-
-    $.fn.scrollspy             = Plugin
-    $.fn.scrollspy.Constructor = ScrollSpy
-
-
-    // SCROLLSPY NO CONFLICT
-    // =====================
-
-    $.fn.scrollspy.noConflict = function () {
-      $.fn.scrollspy = old
-      return this
-    }
-
-
-    // SCROLLSPY DATA-API
-    // ==================
-
-    $(window).on('load.bs.scrollspy.data-api', function () {
-      $('[data-spy="scroll"]').each(function () {
-        var $spy = $(this)
-        Plugin.call($spy, $spy.data())
-      })
-    })
-
-  }(jQuery);
-</script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var $sidebarInner = $('.sidebar-inner');
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.didShow', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-          var self = this;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      $(indicator).velocity('stop').velocity({
-        opacity: action === 'show' ? 0.4 : 0
-      }, { duration: 100 });
-    }
-
-  });
-</script>
-
-
-  <script type="text/javascript" id="sidebar.nav">
-    $(document).ready(function () {
-      var html = $('html');
-
-      $('.sidebar-nav li').on('click', function () {
-        var item = $(this);
-        var activeTabClassName = 'sidebar-nav-active';
-        var activePanelClassName = 'sidebar-panel-active';
-        if (item.hasClass(activeTabClassName)) {
-          return;
-        }
-
-        var currentTarget = $('.' + activePanelClassName);
-        var target = $('.' + item.data('target'));
-
-        currentTarget.velocity('transition.slideUpOut', 200, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', 200)
-            .addClass(activePanelClassName);
-        });
-
-        item.siblings().removeClass(activeTabClassName);
-        item.addClass(activeTabClassName);
-      });
-
-      $('.post-toc a').on('click', function (e) {
-        e.preventDefault();
-        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        });
-      });
-
-      // Expand sidebar on post detail page by default, when post has a toc.
-      var $tocContent = $('.post-toc-content');
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0 && isDesktop()) {
-        setTimeout(function () {
-          $('.sidebar-toggle').trigger('click');
-        }, 800);
-      }
-    });
-  </script>
 
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
 
   
 
@@ -923,6 +727,7 @@
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
@@ -931,6 +736,44 @@
   </script>
 
   
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
